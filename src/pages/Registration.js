@@ -100,7 +100,7 @@ class ComponentToPrint extends React.Component {
       <div style={{ height: "50rem", width: "76rem", justifyContent: "center", justifyItems: "center" }} className="col">
         <div style={{
           fontSize: "80px", color: "#000", wordWrap: "true",
-          textAlign: "center", paddingTop: "32rem", fontWeight: "bolder",
+          textAlign: "center", paddingTop: "32rem", fontWeight: "900",
           justifyContent: "center", position: "absolute", width: "76rem",
         }}>
           {this.props.name}
