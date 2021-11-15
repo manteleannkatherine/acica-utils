@@ -15,21 +15,20 @@ const Registration = () => {
     content: () => componentRef.current,
   });
 
-  const [fullName, setFullName] = React.useState();
+  const [fullName, setFullName] = React.useState('');
   const handleName = (e) => {
     setFullName(e.target.value);
-    console.log(e.target.value)
   }
 
-  const [company, setCompany] = React.useState();
+  const [company, setCompany] = React.useState('');
   const handleCompany = (e) => {
     setCompany(e.target.value);
   }
 
-  const [country, setCountry] = React.useState();
-  const handleCountry = (e) => {
-    setCountry(e.target.value);
-  }
+  // const [country, setCountry] = React.useState('');
+  // const handleCountry = (e) => {
+  //   setCountry(e.target.value);
+  // }
 
   return (
     <div className="container container-fluid p-5">
@@ -44,9 +43,9 @@ const Registration = () => {
           <div className="row p-3">
             <input type="text" className="form-control" placeholder="Company" onChange={e => handleCompany(e)} />
           </div>
-          <div className="row p-3">
+          {/* <div className="row p-3">
             <input type="text" className="form-control" placeholder="Country" onChange={e => handleCountry(e)} />
-          </div>
+          </div> */}
           <div className="row p-3">
             <button type="submit" className="btn btn-success" onClick={handlePrint}> Register & Print </button>
           </div>
@@ -71,30 +70,59 @@ const Registration = () => {
               }}>
                 {company}
               </div>
-              <div style={{
+              {/* <div style={{
                 fontSize: "1.75rem", color: "#000", wordWrap: "true",
                 textAlign: "center", paddingTop: "0.5rem", fontWeight: "bold",
                 textTransform: "uppercase"
               }}>
                 {country}
-              </div>
+              </div> */}
             </div>
           </div>
 
           <div style={{ display: "none" }}>
             <ComponentToPrint ref={componentRef} pageStyle="@page { size: 100mm 148mm }"
               name={fullName}
-              company={company}
-              country={country} />
+              company={company} />
           </div>
+          {/* {data.map((d) => {
 
-          {data.map((d) => (
-            <div style={{ display: "none" }}>
-              <ComponentToPrint ref={componentRef} pageStyle="@page { size: 100mm 148mm }"
+            // return (<ComponentToPrint ref={componentRef} pageStyle="@page { size: 100mm 148mm }"
+            //   name={d.fullName}
+            //   company={d.company} />)
+            var names = ['Jake', 'Jon', 'Thruster'];
+            return (
+              
+            )
+          })} */}
+          {/* <div style={{ display: "none" }}>
+            {data.map((d, index) => (
+              <ComponentToPrint ref={componentRef} pageStyle="@page { size: 100mm 148mm }" data-index={index}
                 name={d.fullName}
                 company={d.company} />
-            </div>
-          ))}
+            ))}
+          </div> */}
+
+          {/* <table>
+            <th>
+              <td>Name</td>
+              <td>Company</td>
+              <td>Print</td>
+            </th>
+            {data.map((d, index) => (
+              <tr>
+                <td>{d.fullName}</td>
+                <td>{d.company}</td>
+                <td><button type="submit" className="btn btn-success" onClick={handlePrint} data-index={index}> Register & Print </button></td>
+                <td>
+                  <ComponentToPrint ref={componentRef} pageStyle="@page { size: 100mm 148mm }" data-index={index}
+                    name={d.fullName}
+                    company={d.company} />
+                </td>
+              </tr>
+            ))}
+          </table> */}
+
         </div>
       </div>
     </div >
