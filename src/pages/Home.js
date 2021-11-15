@@ -11,13 +11,14 @@ const Home = () => {
         <div className="row">
           <div className="col">
             <Nav>
-              <ul className='nav col-12 col-md-auto mb-2 justify-content-center mb-md-0'>
-                <li>
+              <ul className='nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 p-2'>
+                <li className='mr-5'>
                   <LinkContainer to='http://acicadubai.com'>
                     <button className="btn btn-success">Conference</button>
                   </LinkContainer>
                 </li>
-                <li>
+                &nbsp; &nbsp; &nbsp;
+                <li className="ml-5">
                   <LinkContainer to='/registration'>
                     <button className="btn btn-success">Registration</button>
                   </LinkContainer>

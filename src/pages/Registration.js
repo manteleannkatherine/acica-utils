@@ -5,11 +5,27 @@ import badge from "../imgs/badge.jpeg"
 
 const Registration = () => {
   const componentRef = useRef();
-  const componentRefPreview = useRef();
 
   const handlePrint = useReactToPrint({
     content: () => componentRef.current,
   });
+
+  const [fullName, setFullName] = React.useState();
+  const handleName = (e) => {
+    setFullName(e.target.value);
+    console.log(e.target.value)
+  }
+
+  const [position, setPosition] = React.useState();
+  const handlePosition = (e) => {
+    setPosition(e.target.value);
+  }
+
+
+  const [company, setCompany] = React.useState();
+  const handleCompany = (e) => {
+    setCompany(e.target.value);
+  }
 
   return (
     <div className="container container-fluid p-5">
@@ -19,13 +35,13 @@ const Registration = () => {
             <h5>REGISTRATION</h5>
           </div>
           <div className="row p-3">
-            <input type="text" className="form-control" placeholder="Full Name" />
+            <input type="text" className="form-control" placeholder="Full Name" onChange={e => handleName(e)} />
           </div>
           <div className="row p-3">
-            <input type="text" className="form-control" placeholder="Position" />
+            <input type="text" className="form-control" placeholder="Position" onChange={e => handlePosition(e)} />
           </div>
           <div className="row p-3">
-            <input type="text" className="form-control" placeholder="Company" />
+            <input type="text" className="form-control" placeholder="Company" onChange={e => handleCompany(e)} />
           </div>
           <div className="row p-3">
             <button type="submit" className="btn btn-success" onClick={handlePrint}> Register & Print </button>
@@ -35,7 +51,28 @@ const Registration = () => {
           <h5>PREVIEW</h5>
 
           <div style={{ backgroundImage: `url(${badge})`, backgroundSize: "80%", backgroundRepeat: "no-repeat" }}>
-            <ComponentPreview ref={componentRefPreview} />
+            <div style={{ height: "50rem", width: "35rem", justifyContent: "center", justifyItems: "center" }} className="col">
+              <div style={{
+                fontSize: "2.5rem", color: "#000", wordWrap: "true",
+                textAlign: "center", paddingTop: "15rem", fontWeight: "bold",
+                justifyContent: "center", position: "absolute", width: "35rem",
+                display: "flex"
+              }}>
+                {fullName}
+              </div>
+              <div style={{
+                fontSize: "1.75rem", color: "#000", wordWrap: "true",
+                textAlign: "center", paddingTop: "19rem", fontWeight: "bold"
+              }}>
+                {position}
+              </div>
+              <div style={{
+                fontSize: "1.75rem", color: "#000", wordWrap: "true",
+                textAlign: "center", paddingTop: "0.5rem", fontWeight: "bold"
+              }}>
+                {company}
+              </div>
+            </div>
           </div>
 
           <div style={{ display: "none" }}>
@@ -67,35 +104,6 @@ class ComponentToPrint extends React.Component {
         <div style={{
           fontSize: "3.25rem", color: "#000", wordWrap: "true",
           textAlign: "center", paddingTop: "1rem", fontWeight: "bold"
-        }}>
-          Creative Space Dubai
-        </div>
-      </div>
-    );
-  }
-}
-
-class ComponentPreview extends React.Component {
-  render() {
-    return (
-      <div style={{ height: "50rem", width: "35rem", justifyContent: "center", justifyItems: "center" }} className="col">
-        <div style={{
-          fontSize: "2.5rem", color: "#000", wordWrap: "true",
-          textAlign: "center", paddingTop: "15rem", fontWeight: "bold",
-          justifyContent: "center", position: "absolute", width: "35rem",
-          display: "flex"
-        }}>
-          Ann Katherine Mantele
-        </div>
-        <div style={{
-          fontSize: "1.75rem", color: "#000", wordWrap: "true",
-          textAlign: "center", paddingTop: "19rem", fontWeight: "bold"
-        }}>
-          Programmer
-        </div>
-        <div style={{
-          fontSize: "1.75rem", color: "#000", wordWrap: "true",
-          textAlign: "center", paddingTop: "0.5rem", fontWeight: "bold"
         }}>
           Creative Space Dubai
         </div>
