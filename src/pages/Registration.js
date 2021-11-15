@@ -21,6 +21,11 @@ const Registration = () => {
     setCompany(e.target.value);
   }
 
+  const [country, setCountry] = React.useState();
+  const handleCountry = (e) => {
+    setCountry(e.target.value);
+  }
+
   return (
     <div className="container container-fluid p-5">
       <div className="row">
@@ -33,6 +38,9 @@ const Registration = () => {
           </div>
           <div className="row p-3">
             <input type="text" className="form-control" placeholder="Company" onChange={e => handleCompany(e)} />
+          </div>
+          <div className="row p-3">
+            <input type="text" className="form-control" placeholder="Country" onChange={e => handleCountry(e)} />
           </div>
           <div className="row p-3">
             <button type="submit" className="btn btn-success" onClick={handlePrint}> Register & Print </button>
@@ -57,11 +65,21 @@ const Registration = () => {
               }}>
                 {company}
               </div>
+              <div style={{
+                fontSize: "1.75rem", color: "#000", wordWrap: "true",
+                textAlign: "center", paddingTop: "0.5rem", fontWeight: "bold",
+                textTransform: "uppercase"
+              }}>
+                {country}
+              </div>
             </div>
           </div>
 
           <div style={{ display: "none" }}>
-            <ComponentToPrint ref={componentRef} pageStyle="@page { size: 100mm 148mm }" />
+            <ComponentToPrint ref={componentRef} pageStyle="@page { size: 100mm 148mm }"
+              name={fullName}
+              company={company}
+              country={country} />
           </div>
         </div>
       </div>
@@ -70,21 +88,34 @@ const Registration = () => {
 }
 
 class ComponentToPrint extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      fishInSea: 100
+    }
+  }
+
   render() {
     return (
       <div style={{ height: "50rem", width: "75rem", justifyContent: "center", justifyItems: "center" }} className="col">
         <div style={{
           fontSize: "75px", color: "#000", wordWrap: "true",
-          textAlign: "center", paddingTop: "35rem", fontWeight: "bold",
+          textAlign: "center", paddingTop: "28rem", fontWeight: "bold",
           justifyContent: "center", position: "absolute", width: "75rem",
         }}>
-          Ann Katherine Mantele
+          {this.props.name}
         </div>
         <div style={{
           fontSize: "55px", color: "#000", wordWrap: "true",
-          textAlign: "center", paddingTop: "43rem", fontWeight: "bold"
+          textAlign: "center", paddingTop: "35rem", fontWeight: "bold"
         }}>
-          Creative Space Dubai
+          {this.props.company}
+        </div>
+        <div style={{
+          fontSize: "55px", color: "#000", wordWrap: "true",
+          textAlign: "center", paddingTop: "1rem", fontWeight: "bold"
+        }}>
+          {this.props.country}
         </div>
       </div>
     );
