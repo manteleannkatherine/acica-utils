@@ -50,11 +50,11 @@ const Registration = () => {
           <h5>PREVIEW</h5>
 
           <div style={{ backgroundImage: `url(${badge})`, backgroundSize: "80%", backgroundRepeat: "no-repeat" }}>
-            <div style={{ height: "50rem", width: "35rem", justifyContent: "center", justifyItems: "center" }} className="col">
+            <div style={{ height: "50rem", width: "34rem", justifyContent: "center", justifyItems: "center" }} className="col">
               <div style={{
                 fontSize: "2.5rem", color: "#000", wordWrap: "true",
                 textAlign: "center", paddingTop: "15rem", fontWeight: "bold",
-                justifyContent: "center", position: "absolute", width: "35rem",
+                justifyContent: "center", position: "absolute", width: "34rem",
                 display: "flex"
               }}>
                 {fullName}
@@ -97,23 +97,24 @@ class ComponentToPrint extends React.Component {
 
   render() {
     return (
-      <div style={{ height: "50rem", width: "75rem", justifyContent: "center", justifyItems: "center" }} className="col">
+      <div style={{ height: "50rem", width: "76rem", justifyContent: "center", justifyItems: "center" }} className="col">
         <div style={{
-          fontSize: "75px", color: "#000", wordWrap: "true",
-          textAlign: "center", paddingTop: "28rem", fontWeight: "bold",
-          justifyContent: "center", position: "absolute", width: "75rem",
+          fontSize: "80px", color: "#000", wordWrap: "true",
+          textAlign: "center", paddingTop: "32rem", fontWeight: "bold",
+          justifyContent: "center", position: "absolute", width: "76rem",
         }}>
           {this.props.name}
         </div>
         <div style={{
           fontSize: "55px", color: "#000", wordWrap: "true",
-          textAlign: "center", paddingTop: "35rem", fontWeight: "bold"
+          textAlign: "center", paddingTop: "40rem", fontWeight: "bold"
         }}>
           {this.props.company}
         </div>
         <div style={{
           fontSize: "55px", color: "#000", wordWrap: "true",
-          textAlign: "center", paddingTop: "1rem", fontWeight: "bold"
+          textAlign: "center", paddingTop: "1rem", fontWeight: "bold",
+          textTransform: "uppercase"
         }}>
           {this.props.country}
         </div>
