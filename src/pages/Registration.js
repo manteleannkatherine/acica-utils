@@ -16,12 +16,6 @@ const Registration = () => {
     console.log(e.target.value)
   }
 
-  const [position, setPosition] = React.useState();
-  const handlePosition = (e) => {
-    setPosition(e.target.value);
-  }
-
-
   const [company, setCompany] = React.useState();
   const handleCompany = (e) => {
     setCompany(e.target.value);
@@ -36,9 +30,6 @@ const Registration = () => {
           </div>
           <div className="row p-3">
             <input type="text" className="form-control" placeholder="Full Name" onChange={e => handleName(e)} />
-          </div>
-          <div className="row p-3">
-            <input type="text" className="form-control" placeholder="Position" onChange={e => handlePosition(e)} />
           </div>
           <div className="row p-3">
             <input type="text" className="form-control" placeholder="Company" onChange={e => handleCompany(e)} />
@@ -64,12 +55,6 @@ const Registration = () => {
                 fontSize: "1.75rem", color: "#000", wordWrap: "true",
                 textAlign: "center", paddingTop: "19rem", fontWeight: "bold"
               }}>
-                {position}
-              </div>
-              <div style={{
-                fontSize: "1.75rem", color: "#000", wordWrap: "true",
-                textAlign: "center", paddingTop: "0.5rem", fontWeight: "bold"
-              }}>
                 {company}
               </div>
             </div>
@@ -90,20 +75,14 @@ class ComponentToPrint extends React.Component {
       <div style={{ height: "50rem", width: "75rem", justifyContent: "center", justifyItems: "center" }} className="col">
         <div style={{
           fontSize: "75px", color: "#000", wordWrap: "true",
-          textAlign: "center", paddingTop: "28rem", fontWeight: "bold",
+          textAlign: "center", paddingTop: "35rem", fontWeight: "bold",
           justifyContent: "center", position: "absolute", width: "75rem",
         }}>
           Ann Katherine Mantele
         </div>
         <div style={{
           fontSize: "55px", color: "#000", wordWrap: "true",
-          textAlign: "center", paddingTop: "35rem", fontWeight: "bold"
-        }}>
-          Programmer
-        </div>
-        <div style={{
-          fontSize: "55px", color: "#000", wordWrap: "true",
-          textAlign: "center", paddingTop: "1rem", fontWeight: "bold"
+          textAlign: "center", paddingTop: "43rem", fontWeight: "bold"
         }}>
           Creative Space Dubai
         </div>
