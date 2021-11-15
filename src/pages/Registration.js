@@ -55,13 +55,14 @@ const Registration = () => {
                 fontSize: "2.5rem", color: "#000", wordWrap: "true",
                 textAlign: "center", paddingTop: "15rem", fontWeight: "bold",
                 justifyContent: "center", position: "absolute", width: "34rem",
-                display: "flex"
+                textTransform: "capitalize"
               }}>
                 {fullName}
               </div>
               <div style={{
                 fontSize: "1.75rem", color: "#000", wordWrap: "true",
-                textAlign: "center", paddingTop: "19rem", fontWeight: "bold"
+                textAlign: "center", paddingTop: "19rem", fontWeight: "bold",
+                textTransform: "capitalize"
               }}>
                 {company}
               </div>
@@ -97,17 +98,22 @@ class ComponentToPrint extends React.Component {
 
   render() {
     return (
-      <div style={{ height: "50rem", width: "76rem", justifyContent: "center", justifyItems: "center" }} className="col">
+      <div style={{
+        height: "50rem", width: "70rem", justifyContent: "center", justifyItems: "center",
+        paddingTop: "2rem"
+      }} className="col">
         <div style={{
           fontSize: "80px", color: "#000", wordWrap: "true",
           textAlign: "center", paddingTop: "32rem", fontWeight: "900",
-          justifyContent: "center", position: "absolute", width: "76rem",
+          justifyContent: "center", position: "absolute", width: "70rem",
+          textTransform: "capitalize"
         }}>
           {this.props.name}
         </div>
         <div style={{
           fontSize: "55px", color: "#000", wordWrap: "true",
-          textAlign: "center", paddingTop: "40rem", fontWeight: "bold"
+          textAlign: "center", paddingTop: "40rem", fontWeight: "200",
+          textTransform: "capitalize"
         }}>
           {this.props.company}
         </div>
