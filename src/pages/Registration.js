@@ -2,8 +2,13 @@ import React, { useRef } from "react";
 import { useReactToPrint } from "react-to-print";
 
 import badge from "../imgs/badge.jpeg"
+import data from "../data.js"
 
 const Registration = () => {
+
+  console.log(data);
+
+
   const componentRef = useRef();
 
   const handlePrint = useReactToPrint({
@@ -82,6 +87,14 @@ const Registration = () => {
               company={company}
               country={country} />
           </div>
+
+          {data.map((d) => (
+            <div style={{ display: "none" }}>
+              <ComponentToPrint ref={componentRef} pageStyle="@page { size: 100mm 148mm }"
+                name={d.fullName}
+                company={d.company} />
+            </div>
+          ))}
         </div>
       </div>
     </div >
