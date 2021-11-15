@@ -76,7 +76,7 @@ const Registration = () => {
           </div>
 
           <div style={{ display: "none" }}>
-            <ComponentToPrint ref={componentRef} pageStyle="@page { size: 4in 6in }" />
+            <ComponentToPrint ref={componentRef} pageStyle="@page { size: 100mm 148mm }" />
           </div>
         </div>
       </div>
@@ -89,20 +89,20 @@ class ComponentToPrint extends React.Component {
     return (
       <div style={{ height: "50rem", width: "75rem", justifyContent: "center", justifyItems: "center" }} className="col">
         <div style={{
-          fontSize: "5rem", color: "#000", wordWrap: "true",
-          textAlign: "center", paddingTop: "15rem", fontWeight: "bold",
+          fontSize: "75px", color: "#000", wordWrap: "true",
+          textAlign: "center", paddingTop: "28rem", fontWeight: "bold",
           justifyContent: "center", position: "absolute", width: "75rem",
         }}>
           Ann Katherine Mantele
         </div>
         <div style={{
-          fontSize: "3.25rem", color: "#000", wordWrap: "true",
-          textAlign: "center", paddingTop: "23rem", fontWeight: "bold"
+          fontSize: "55px", color: "#000", wordWrap: "true",
+          textAlign: "center", paddingTop: "35rem", fontWeight: "bold"
         }}>
           Programmer
         </div>
         <div style={{
-          fontSize: "3.25rem", color: "#000", wordWrap: "true",
+          fontSize: "55px", color: "#000", wordWrap: "true",
           textAlign: "center", paddingTop: "1rem", fontWeight: "bold"
         }}>
           Creative Space Dubai
