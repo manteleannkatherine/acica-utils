@@ -7,6 +7,7 @@ import Layout from './layout/Layout'
 // pages
 import Home from './pages/Home'
 import Registration from './pages/Registration'
+import Certificate from './pages/Certificate'
 import NotFound from './pages/NotFound'
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
         <Switch>
           <Route path='/' component={Home} exact />
           <Route path='/registration' component={Registration} />
+          <Route path='/certificate' component={Certificate} />
           <Route component={NotFound} />
         </Switch>
       </Container>

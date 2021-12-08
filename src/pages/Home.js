@@ -23,6 +23,12 @@ const Home = () => {
                     <button className="btn btn-success">Registration</button>
                   </LinkContainer>
                 </li>
+                &nbsp; &nbsp; &nbsp;
+                <li className="ml-5">
+                  <LinkContainer to='/certificate'>
+                    <button className="btn btn-success">Certificate</button>
+                  </LinkContainer>
+                </li>
               </ul>
             </Nav>
           </div>
