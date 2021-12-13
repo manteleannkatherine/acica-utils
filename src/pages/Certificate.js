@@ -22,6 +22,18 @@ const Certificate = () => {
     setEvent(e.target.value);
   }
 
+  // eslint-disable-next-line
+  const [date, setDate] = React.useState('');
+  const handleDate = (e) => {
+    setDate(e.target.value);
+  }
+
+  // eslint-disable-next-line
+  const [location, setLocation] = React.useState('');
+  const handleLocation = (e) => {
+    setLocation(e.target.value);
+  }
+
   return (
     <div className="container container-fluid p-5">
       <div className="row">
@@ -36,6 +48,12 @@ const Certificate = () => {
             <input type="text" className="form-control" placeholder="Event" onChange={e => handleEvent(e)} />
           </div>
           <div className="row p-3">
+            <input type="text" className="form-control" placeholder="Date" onChange={e => handleDate(e)} />
+          </div>
+          <div className="row p-3">
+            <input type="text" className="form-control" placeholder="Event" onChange={e => handleLocation(e)} />
+          </div>
+          <div className="row p-3">
             <button type="submit" className="btn btn-success" onClick={handlePrint}> Print </button>
           </div>
         </div>
@@ -43,7 +61,9 @@ const Certificate = () => {
           <div style={{ display: "none" }}>
             <ComponentToPrint ref={componentRef} pageStyle="@page { size: 100mm 148mm }"
               name={fullName}
-              event={event} />
+              event={event}
+              date={date}
+              location={location}/>
           </div>
       </div>
     </div >
@@ -87,8 +107,8 @@ class ComponentToPrint extends React.Component {
           paddingTop: "5.40rem", fontWeight: "200",
           textTransform: "capitalize", paddingLeft: "21rem", width: "130rem"
         }}>
-          November 17-20, 2021 <br />
-          Hilton Dubai Al Habtoor City, Dubai, United Arab Emirates
+          {this.props.date} <br />
+          {this.props.location}
         </div>
       </div>
     );
