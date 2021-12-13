@@ -51,7 +51,7 @@ const Certificate = () => {
             <input type="text" className="form-control" placeholder="Date" onChange={e => handleDate(e)} />
           </div>
           <div className="row p-3">
-            <input type="text" className="form-control" placeholder="Event" onChange={e => handleLocation(e)} />
+            <input type="text" className="form-control" placeholder="Location" onChange={e => handleLocation(e)} />
           </div>
           <div className="row p-3">
             <button type="submit" className="btn btn-success" onClick={handlePrint}> Print </button>
