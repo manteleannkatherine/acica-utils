@@ -33,7 +33,7 @@ const Certificate = () => {
             <input type="text" className="form-control" placeholder="Full Name" onChange={e => handleName(e)} />
           </div>
           <div className="row p-3">
-            <input type="text" className="form-control" placeholder="Event" onChange={e => handleEvent(e)} value="The 59th ACI World Congress and 45th ICA Conference in Dubai 2021"/>
+            <input type="text" className="form-control" placeholder="Event" onChange={e => handleEvent(e)} />
           </div>
           <div className="row p-3">
             <button type="submit" className="btn btn-success" onClick={handlePrint}> Print </button>
@@ -79,7 +79,7 @@ class ComponentToPrint extends React.Component {
           textAlign: "center", paddingTop: "55.10rem", fontWeight: "200",
           textTransform: "capitalize", paddingLeft: "0.5rem", width: "130rem"
         }}>
-          The 59th ACI World Congress and 45th ICA Conference in Dubai 2021 <br />
+          {this.props.event} <br />
           ------------------------------------------------------------------------------------------------------------------------------
         </div>
         <div style={{
