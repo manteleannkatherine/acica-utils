@@ -103,7 +103,7 @@ class ComponentToPrint extends React.Component {
         </div>
         <div style={{
           fontSize: "24px", color: "#000", wordWrap: "true",
-          paddingTop: "7.40rem", fontWeight: "200",
+          paddingTop: "7.60rem", fontWeight: "200",
           textTransform: "capitalize", paddingLeft: "21rem", width: "130rem"
         }}>
           {this.props.date} <br />
