@@ -96,7 +96,7 @@ class ComponentToPrint extends React.Component {
         </div>
         <div style={{
           fontSize: "35px", color: "#000", wordWrap: "true",
-          textAlign: "center", paddingTop: "49rem", fontWeight: "200",
+          textAlign: "center", paddingTop: "49rem", fontWeight: "900",
           textTransform: "capitalize", paddingLeft: "0.5rem", width: "130rem"
         }}>
           {this.props.event} <br />
