@@ -25,6 +25,13 @@ const Menu = () => {
               </LinkContainer>
             </li>
           </ul>
+          <ul className='nav col-12 col-md-auto mb-2 justify-content-center mb-md-0'>
+            <li>
+              <LinkContainer to='/astc'>
+                <Nav.Link className='nav-link px-2 link-secondary'>ASTC Certificate</Nav.Link>
+              </LinkContainer>
+            </li>
+          </ul>
 
           <div className='col-md-3 text-end'>
             <LinkContainer to='/'>

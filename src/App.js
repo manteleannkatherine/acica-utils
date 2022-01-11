@@ -8,6 +8,7 @@ import Layout from './layout/Layout'
 import Home from './pages/Home'
 import Registration from './pages/Registration'
 import Certificate from './pages/Certificate'
+import ASTCCertificate from './pages/ASTCCertificate'
 import NotFound from './pages/NotFound'
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
           <Route path='/' component={Home} exact />
           <Route path='/registration' component={Registration} />
           <Route path='/certificate' component={Certificate} />
+          <Route path='/astc' component={ASTCCertificate} />
           <Route component={NotFound} />
         </Switch>
       </Container>
